@@ -49,7 +49,7 @@ app.use('/todos', proxy(server,
 
 app.use('/img', proxy(server,
     {
-        proxyReqPathResolver: (req) => req.baseUrl
+        proxyReqPathResolver: (req) => req.originalUrl
 
     })
 );
